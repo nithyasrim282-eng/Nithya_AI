@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Startup Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #141b35;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        .hero {
+            min-height: 500px;
+            padding: 100px 8%;
+            text-align: center;
+            background: linear-gradient(135deg, #101735, #31245c, #073c55);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #d1d8ed;
+            max-width: 750px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00e5ff;
+            color: #07101c;
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 8px;
+        }
+
+        .btn:hover {
+            background: #9b8cff;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 15px;
+            color: #00e5ff;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #c5cce0;
+            margin-bottom: 35px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #151e38;
+            padding: 28px;
+            border-radius: 15px;
+            border: 1px solid #293657;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+        }
+
+        .card h3 {
+            color: #00e5ff;
+            margin: 12px 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #c5cce0;
+        }
+
+        .icon {
+            font-size: 40px;
+        }
+
+        #about {
+            background: #11182e;
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 850px;
+            margin: auto;
+            color: #d0d6e8;
+            font-size: 18px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+
+        .feature {
+            background: #202b4b;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .feature h3 {
+            color: #00e5ff;
+        }
+
+        .contact-box {
+            background: #151e38;
+            padding: 30px;
+            max-width: 750px;
+            margin: auto;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-box p {
+            margin: 15px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-box a {
+            color: #00e5ff;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #060a15;
+            padding: 25px;
+            text-align: center;
+            color: #c5cce0;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .services,
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">AI STARTUP</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to <span>AI Startup</span></h1>
+
+        <p>
+            Discover the power of Artificial Intelligence.
+            We create smart digital solutions, intelligent automation,
+            and innovative technologies for a better future.
+        </p>
+
+        <a href="#services" class="btn">Explore Services</a>
+        <a href="#contact" class="btn">Contact Us</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="title">Our AI Services</h2>
+
+        <p class="subtitle">
+            Smart solutions to transform your ideas into reality.
+        </p>
+
+        <div class="services">
+
+            <div class="card">
+                <div class="icon">🤖</div>
+                <h3>AI Chatbots</h3>
+                <p>Create intelligent chatbots to answer questions
+                and improve customer support.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Machine Learning</h3>
+                <p>Use data-driven technology to identify patterns
+                and generate useful predictions.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Data Analytics</h3>
+                <p>Convert raw data into meaningful information
+                for smarter decision-making.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h3>AI Automation</h3>
+                <p>Automate repetitive tasks and improve
+                productivity through intelligent systems.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Build modern, responsive websites with
+                creative designs and useful features.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>AI Consulting</h3>
+                <p>Discover practical ways to use AI
+                for business and digital growth.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="title">About Our Startup</h2>
+
+        <p>
+            AI Startup focuses on exploring Artificial Intelligence
+            and developing innovative digital solutions.
+            Our goal is to make technology useful, accessible,
+            and easy to understand. We believe that AI can help
+            people solve problems, improve productivity, and
+            create new opportunities for the future.
+        </p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2 class="title">Why Choose Us?</h2>
+
+        <p class="subtitle">
+            Innovation, creativity, and technology in one place.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>✔ Innovative Ideas</h3>
+                <p>Explore creative approaches to modern problems.</p>
+            </div>
+
+            <div class="feature">
+                <h3>✔ Smart Solutions</h3>
+                <p>Discover technology that supports your goals.</p>
+            </div>
+
+            <div class="feature">
+                <h3>✔ Modern Technology</h3>
+                <p>Learn about new developments in artificial intelligence.</p>
+            </div>
+
+            <div class="feature">
+                <h3>✔ User-Friendly Design</h3>
+                <p>Enjoy simple and responsive digital experiences.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="title">Contact Us</h2>
+
+        <p class="subtitle">
+            Have an idea? Let's connect and explore the possibilities.
+        </p>
+
+        <div class="contact-box">
+
+            <p>
+                <strong>Email:</strong><br>
+                <a href="mailto:nithyasrim282@gmail.com">
+                    nithyasrim282@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>WhatsApp:</strong><br>
+                <a href="https://wa.me/919361934032" target="_blank">
+                    +91 93619 34032
+                </a>
+            </p>
+
+            <p>
+                <strong>Call Us:</strong><br>
+                <a href="tel:+919361934032">
+                    +91 93619 34032
+                </a>
+            </p>
+
+            <a href="https://wa.me/919361934032"
+               target="_blank" class="btn">
+                Chat on WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AI Startup | All Rights Reserved.</p>
+        <p>Innovating Today for a Smarter Tomorrow.</p>
+    </footer>
+
+</body>
+</html>
